@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghetto Economics — Coming Soon</title>
+<meta name="description" content="Ghetto Economics: The Hidden Price of Living without a Cushion. A book by Phil Georges. Coming soon.">
+<meta property="og:title" content="Ghetto Economics">
+<meta property="og:description" content="The Hidden Price of Living without a Cushion. A book by Phil Georges. Coming soon.">
+<meta property="og:url" content="https://ghettoeconomics.com">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314110f'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23f3ece0'%3EG%3C/text%3E%3Crect x='14' y='52' width='36' height='4' fill='%23c8402e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14110f;
+    --ink-2:#1e1a17;
+    --paper:#f3ece0;
+    --paper-dim:#bdb3a4;
+    --muted:#8a8074;
+    --red:#c8402e;
+    --red-bright:#e0513d;
+    --line:#3a332d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Libre Caslon Text",Georgia,serif;
+    line-height:1.65;
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+  body::before{ /* faint paper grain */
+    content:"";position:fixed;inset:0;pointer-events:none;opacity:.06;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:56px 24px 40px;position:relative}
+
+  .eyebrow{
+    font-family:"Inter",system-ui,sans-serif;font-size:.72rem;font-weight:600;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--red-bright);
+    display:flex;align-items:center;gap:14px;
+  }
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  h1{
+    font-family:"Oswald","Arial Narrow",sans-serif;font-weight:700;
+    font-size:clamp(3.2rem,12vw,6.4rem);line-height:.9;letter-spacing:.01em;
+    text-transform:uppercase;margin:28px 0 0;
+  }
+  h1 .second{display:block;color:var(--paper)}
+  .rule{height:6px;width:120px;background:var(--red);margin:26px 0 22px}
+  .subtitle{
+    font-style:italic;font-size:clamp(1.2rem,3.6vw,1.6rem);color:var(--paper-dim);line-height:1.35;
+  }
+
+  .question{
+    margin:72px 0 0;padding:34px 0 0;border-top:1px solid var(--line);
+  }
+  .question blockquote{
+    font-size:clamp(1.55rem,4.6vw,2.35rem);line-height:1.25;font-weight:700;
+  }
+  .question blockquote::before{content:"\201C";color:var(--red-bright)}
+  .question blockquote::after{content:"\201D";color:var(--red-bright)}
+  .question p{margin-top:18px;font-size:1.08rem;color:var(--paper-dim)}
+
+  .body{margin-top:56px}
+  .body p{font-size:1.08rem;margin-bottom:1.3em;color:#e6ddcf}
+  .body > p:first-child::first-letter{
+    font-family:"Oswald",sans-serif;font-weight:700;float:left;font-size:3.6em;line-height:.85;
+    padding:.06em .12em 0 0;color:var(--red-bright);
+  }
+  .callout{
+    border-left:4px solid var(--red);padding:4px 0 4px 20px;margin:32px 0;
+  }
+  .callout p{margin:0;color:var(--paper)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+  .tag{
+    font-family:"Inter",sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    border:1px solid var(--line);color:var(--paper-dim);padding:6px 10px;border-radius:2px;
+  }
+  .close{font-size:1.18rem !important;color:var(--paper) !important}
+  .close em{font-style:italic}
+
+  .signup{
+    margin-top:56px;background:var(--ink-2);border:1px solid var(--line);
+    padding:34px 28px;border-radius:4px;
+  }
+  .signup h2{
+    font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.06em;
+    font-size:1.5rem;line-height:1.2;
+  }
+  .signup p.lead{font-family:"Inter",sans-serif;font-size:.95rem;color:var(--paper-dim);margin-top:6px}
+  form{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+  label.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  input[type=email]{
+    flex:1 1 240px;min-width:0;font:500 1rem "Inter",sans-serif;color:var(--paper);
+    background:var(--ink);border:1px solid #4a4139;border-radius:3px;padding:14px 16px;
+  }
+  input[type=email]::placeholder{color:var(--muted)}
+  input[type=email]:focus{outline:2px solid var(--red-bright);outline-offset:1px;border-color:transparent}
+  button{
+    flex:0 0 auto;font:600 .9rem "Inter",sans-serif;letter-spacing:.1em;text-transform:uppercase;
+    background:var(--red);color:#fff;border:0;border-radius:3px;padding:14px 24px;cursor:pointer;
+    transition:background .15s;
+  }
+  button:hover{background:var(--red-bright)}
+  button:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
+  button[disabled]{opacity:.6;cursor:wait}
+  .hp{display:none}
+  .status{font-family:"Inter",sans-serif;font-size:.92rem;margin-top:14px;min-height:1.3em}
+  .status.ok{color:#9fd3a7}
+  .status.err{color:#f0a394}
+  .fine{font-family:"Inter",sans-serif;font-size:.78rem;color:var(--muted);margin-top:10px}
+
+  footer{
+    margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-family:"Inter",sans-serif;font-size:.8rem;color:var(--muted);letter-spacing:.04em;
+  }
+  footer strong{color:var(--paper-dim);font-weight:600}
+
+  @media (max-width:480px){
+    .wrap{padding:40px 16px 32px}
+    .question{margin-top:52px}
+    .signup{padding:26px 18px}
+    button{width:100%}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .fade{opacity:0;transform:translateY(10px);animation:in .8s ease forwards}
+    .d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
+    @keyframes in{to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <div class="eyebrow fade">A book by Phil Georges &middot; Coming soon</div>
+    <h1 class="fade d1">Ghetto<span class="second">Economics</span></h1>
+    <div class="rule fade d2"></div>
+    <p class="subtitle fade d2">The Hidden Price of Living without a Cushion</p>
+  </header>
+
+  <section class="question fade d3">
+    <blockquote>Why does someone who lives in an apartment drive a Hummer?</blockquote>
+    <p>An eight-year-old asked that question in a parking lot. It took his father twenty years to answer it.</p>
+  </section>
+
+  <section class="body">
+    <p>Phil Georges has spent his career on the collecting end of the poverty premium. He bought foreclosed homes, sold two-dollar-a-day phone plans that cost more than the monthly plan on the same wall, and spent forty years as a landlord watching tenants pay a late fee every month rather than ever get one month ahead.</p>
+
+    <div class="callout">
+      <p>What he found is a surcharge built into American life.</p>
+    </div>
+
+    <div class="tags" aria-hidden="true">
+      <span class="tag">Rent-to-own</span><span class="tag">Check cashing</span><span class="tag">Weekly payments</span><span class="tag">Late fees</span>
+    </div>
+    <p>Rent-to-own, check cashing, weekly payments, late fees: none of them is priced by risk. They're priced by the fact that the customer can't walk away.</p>
+
+    <p class="close"><em>Ghetto Economics</em> is the story of what it really costs to live with no cushion, told by someone who has stood on both sides of the transaction.</p>
+  </section>
+
+  <section class="signup" id="signup">
+    <h2>Be the first to know</h2>
+    <p class="lead">Get an email when the book launches. No spam, ever.</p>
+    <form id="notify" action="https://formspree.io/f/xaenkqlr" method="POST">
+      <label class="sr" for="email">Email address</label>
+      <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New Ghetto Economics sign-up">
+      <button type="submit">Notify me</button>
+    </form>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+    <p class="fine">Your email is used only for book updates.</p>
+  </section>
+
+  <footer>
+    <span><strong>Ghetto Economics</strong> &middot; Phil Georges</span>
+    <span>&copy; <span id="yr">2026</span> ghettoeconomics.com</span>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    var form = document.getElementById('notify');
+    var status = document.getElementById('status');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button');
+      btn.disabled = true; status.className = 'status'; status.textContent = 'Sending…';
+      fetch(form.action, { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } })
+        .then(function(r){
+          if (r.ok) { form.reset(); status.className='status ok'; status.textContent = "Thank you — you're on the list."; }
+          else { throw new Error(); }
+        })
+        .catch(function(){ status.className='status err'; status.textContent = 'Something went wrong. Please try again in a moment.'; })
+        .finally(function(){ btn.disabled = false; });
+    });
+  })();
+</script>
+</body>
+</html>
